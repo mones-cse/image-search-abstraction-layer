@@ -12,6 +12,7 @@ app.listen(app.get('port'), function() {
 
 //mongoose setup
 mongoose.connect(process.env.DB_URL);
+// console.log(mongoose.connection.readyState);
 imageSearchSchema = new mongoose.Schema({
     term: String,
     when: Date
@@ -37,18 +38,16 @@ app.get('/api/imagesearch/:topic', function (req, res) {
         if (err) throw err;
         // console.log('saved data ',res);
     })
-
-    //  res.send(req.params.topic);
-    var topic = req.params.topic;
+    
     //get data
+    var topic = req.params.topic;
+    var offset =req.query.offset;
     googleSearch.build({
         q: topic,
-        //start: 5,
+        start: offset||1,
         searchType: "image",
     }, function (error, response) {
-        // console.log('-----');
         if (error) return error;
-        // console.log('response is', response);
         if (response.error) {
             res.send('Bad request');
             return;
