@@ -2,8 +2,7 @@
 Image search abstraction layer for free code camp asdasd
 
 
-
-** Image search input example
+ <h3>Image search input example</h3>
     <code>https://image-search-2017.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10</code>
     <h3>output will be</h3>
     <pre>
