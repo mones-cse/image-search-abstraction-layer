@@ -1,0 +1,8 @@
+{
+  "name": "image-search-abstraction-layer",
+  "description": "image-search-abstraction-layer for free code camp project",
+  "repository": "git+https://github.com/mones-cse/image-search-abstraction-layer.git",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express"],
+  "image": "heroku/nodejs"
+}

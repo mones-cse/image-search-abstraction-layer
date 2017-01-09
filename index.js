@@ -19,8 +19,8 @@ imageSearchSchema = new mongoose.Schema({
 ImageSearchModel = mongoose.model('ImageSearchModel', imageSearchSchema);
 //google search setup
 var googleSearch = new GoogleSearch({
-    // key: process.env.CSE_KEY,
-    // cx: process.env.CSE_CX
+    key: process.env.CSE_KEY,
+    cx: process.env.CSE_CX
 });
 //home page 
 app.get('/', function (req, res) {
